@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews | spm Website</title>
+    <style>
+        /* ===== BASE STYLES ===== */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+        }
+        
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: #000;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+        /* ===== NAVIGATION BAR ===== */
+        
+        nav {
+            background-color: rgba(2, 6, 23, 0.95);
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover {
+            background-color: rgba(30, 41, 59, 0.8);
+        }
+        
+        nav a.active {
+            background-color: rgba(59, 130, 246, 0.3);
+            color: #60a5fa;
+        }
+        /* ===== REVIEWS SECTION ===== */
+        
+        .reviews-container {
+            flex: 1;
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        .reviews-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .reviews-header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, #818cf8, #60a5fa);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .reviews-header p {
+            color: #94a3b8;
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .review-card {
+            background-color: rgba(15, 23, 42, 0.9);
+            border-radius: 12px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .review-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .review-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #3b82f6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .review-info h3 {
+            color: #f8fafc;
+            margin-bottom: 0.3rem;
+        }
+        
+        .review-info .stars {
+            color: #fbbf24;
+            font-size: 0.9rem;
+        }
+        
+        .review-content {
+            color: #94a3b8;
+            line-height: 1.7;
+        }
+        /* ===== FOOTER ===== */
+        
+        footer {
+            background-color: rgba(2, 6, 23, 0.95);
+            color: #e2e8f0;
+            text-align: center;
+            padding: 1.8rem;
+            font-size: 1rem;
+        }
+        /* ===== RESPONSIVE DESIGN ===== */
+        
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 1rem;
+            }
+            .reviews-container {
+                padding: 2rem 1rem;
+            }
+            .reviews-header h1 {
+                font-size: 2rem;
+            }
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="assignment.html">Home</a>
+        <a href="Login.html">Login</a>
+        <a href="Content.html">Content</a>
+        <a href="Review.html" class="active">Reviews</a>
+    </nav>
+
+    <!-- Reviews Section -->
+    <main class="reviews-container">
+        <div class="reviews-header">
+            <h1>Customer Reviews</h1>
+            <p>See what our users are saying about their spm experience</p>
+        </div>
+
+        <div class="reviews-grid">
+            <!-- Review 1 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">AO</div>
+                    <div class="review-info">
+                        <h3>Adebayo Ogunlesi</h3>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                </div>
+                <div class="review-content">
+                    <p>This platform is sweet like Fanta as a Lagos-based developer, the content helped me level up my skills and land a remote job with a foreign company. Naija no dey carry last!</p>
+                </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">CE</div>
+                    <div class="review-info">
+                        <h3>Chioma Eze</h3>
+                        <div class="stars">★★★★☆</div>
+                    </div>
+                </div>
+                <div class="review-content">
+                    <p>Solid platform for learning tech skills. The only reason I no give 5 stars be say I wan see more courses on fintech solutions wey dey relevant for our Nigerian market.</p>
+                </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">IM</div>
+                    <div class="review-info">
+                        <h3>Ibrahim Mohammed</h3>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                </div>
+                <div class="review-content">
+                    <p>Wallahi, spm change my life! From Kano to working remotely for international clients. The networking features helped me connect with other tech bros in the North.</p>
+                </div>
+            </div>
+
+            <!-- Review 4 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">FA</div>
+                    <div class="review-info">
+                        <h3>Folake Adebayo</h3>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                </div>
+                <div class="review-content">
+                    <p>As a woman in tech for Abuja, spm give me confidence to pursue my dreams. The community no dey discriminate and the tutorials dey very detailed. Big ups!</p>
+                </div>
+            </div>
+
+            <!-- Review 5 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">OE</div>
+                    <div class="review-info">
+                        <h3>Obinna Ezeogu</h3>
+                        <div class="stars">★★★☆☆</div>
+                    </div>
+                </div>
+                <div class="review-content">
+                    <p>The platform try sha, but network issues dey affect video streaming sometimes. When I complain to support, dem reply quick with alternative solutions. Dem try.</p>
+                </div>
+            </div>
+
+            <!-- Review 6 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">AB</div>
+                    <div class="review-info">
+                        <h3>Amina Bello</h3>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                </div>
+                <div class="review-content">
+                    <p>This thing sweet die! As a fresh graduate from ABUAD, the certification from here help me get job pass my mates wey no do the course. I don recommend am to all my people!</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Azeez Website. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
